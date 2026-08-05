@@ -5,8 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarah</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon-16x16.png" />
+  <title>Sarah Resume</title>
   <link rel="stylesheet" href="style.css" />
 
   <!-- 
@@ -18,7 +17,11 @@
     rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Geist+Pixel&family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/04d2e2f21b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -44,13 +47,14 @@
       <h2>Sarah Namikata
       </h2>
       <p>
-        Oi, que bom que você está aqui! Esse é o meu websitezinho que criei
-        pra mostrar um pouco do que eu aprendi usando Css, Html e Javascript.
-        Eu espero que você goste!
+        Alguns dos projetos que desenvolvi
+        durante minha jornada de aprendizado em tecnologia. Atualmente, tenho
+        direcionado meus estudos para DevOps, aplicando conceitos como containers,
+        automação de pipelines, orquestração e observabilidade.
       </p>
       <a href="#contato" class="btn">Contato</a>
     </div>
-    <img class="MulherFrontImagem" src="images/mulher retro ROSTO.png" alt="" />
+    <img class="MulherFrontImagem" src="images/minhafotodebebe-modified.png" alt="" />
   </section>
 
   <!-- 
@@ -62,100 +66,94 @@
       <h2>Meus&nbsp;Projetinhos</h2>
     </div>
     <!-- teste mockup -->
-
     <div class="contentmokcup">
       <div class="mockup-image">
         <!-- COLOQYEI A IMAGEM DENTRO DE UM DIV COM WIDTH100% E COLOQYEI TEXT ALIGN START -->
-        <div class="teste-div-imagem">
-          <img class="imagem-celular" src="images/iPhonemockup2noblackbg.png" alt="" />
-        </div>
+        <div class="moodtracker">
 
-        <div class="mockup-content">
-          <h2>Login Page</h2>
-          <!-- 
+
+          <div class="mockup-content">
+            <h2 class='subti'>MoodTracker | 2026 </h2>
+            <!-- 
              -->
-          <div class="mockup-inner-content">
-            <img src="images/javascript.png" alt="" />
-            <div class="mockcup-inner-p">
-              <h3>Javascript</h3>
-              <p>
-                Usei conhecimentos bem básicos do Javascript para fazer uma
-                "validação" simples usando os pop-ups da função alert, mostrar
-                e ocultar a parte da senha.
-              </p>
+            <div class="mockup-inner-content">
+              <img src="images/docker.png" alt="" />
+              <div class="mockcup-inner-p">
+                <h3>Docker</h3>
+                <p>
+                  Utilizei Docker e Docker Compose para empacotar a aplicação e executar o servidor e o MongoDB em
+                  containers separados, com rede interna, variáveis de ambiente e persistência de dados.
+                </p>
+              </div>
             </div>
-          </div>
-          <!--  
+            <!--  
             -->
-          <div class="mockup-inner-content">
-            <img src="images/html image.png" alt="" />
-            <div class="mockcup-inner-p">
-              <h3>Html</h3>
-              <p>
-                Para estruturação da páginazinha, usando as hashtags mais
-                simples.
-              </p>
+            <div class="mockup-inner-content">
+              <img src="images/cicd.png" alt="" />
+              <div class="mockcup-inner-p">
+                <h3>CI/CD</h3>
+                <p>
+                  Criei uma pipeline com GitHub Actions para automatizar a instalação de dependências, as verificações
+                  do
+                  código, a construção dos containers e o teste de disponibilidade da aplicação.
+                </p>
+              </div>
             </div>
-          </div>
-          <!-- ?? -->
-          <div class="mockup-inner-content">
-            <img src="images/css image.png" alt="" />
-            <div class="mockcup-inner-p">
-              <h3>Css</h3>
-              <p>
-                Para deixar a página bonitinha, no css foi usado bastante da
-                propriedade do hover e transform pra fazer a página mais
-                bonita e suave
-              </p>
+            <!-- ?? -->
+            <div class="mockup-inner-content">
+              <img src="images/k82.png" alt="" />
+              <div class="mockcup-inner-p">
+                <h3>Kubernetes</h3>
+                <p>
+                  Desenvolvi manifestos Kubernetes para gerenciar a aplicação, configurar réplicas, comunicação entre
+                  serviços, variáveis de ambiente e informações sensíveis.
+                </p>
+              </div>
             </div>
-          </div>
-          <!-- ccriei div pra colocar o botao -->
-          <div class="mockup-button-test">
-            <!-- contato botao -->
-            <a class="btn-mockup" href="loginpage/index.html" target="_blank" rel="noopener noreferrer">Veja</a>
+            <div class="mockup-inner-content">
+              <img src="images/prometheus.png" alt="" />
+              <div class="mockcup-inner-p">
+                <h3>Prometheus/Grafana</h3>
+                <p>
+                  Implementei métricas com Prometheus e prom-client, disponibilizadas pelo endpoint /metrics, e utilizei
+                  o
+                  Grafana para acompanhar a saúde e o desempenho da aplicação.
+                </p>
+              </div>
+            </div>
+            <!-- ccriei div pra colocar o botao -->
+            <div class="mockup-button-test">
+              <!-- contato botao -->
+              <a class="btn-mockup" href="https://github.com/Tizuka/moodtracker" target="_blank"
+                rel="noopener noreferrer">Veja</a>
 
-            <!-- ??? -->
+              <!-- ??? -->
+            </div>
+          </div>
+        </div>
+        <div class="contentmokcup">
+          <div class="mockup-image">
+            <div class="mockup-content">
+              <h2 class='subti'>Login Page | 2022</h2>
+              <!-- 
+             -->
+              <div class="">
+                <div class="teste-div-imagem">
+                  <a href="loginpage/index.html" target="_blank" rel="noopener noreferrer" aria-label="Abrir projeto">
+                    <img class="imagem-celular" src="images/iPhonemockup2noblackbg.png" alt="Abrir o projeto" />
+                  </a>
+                </div>
+
+              </div>
+
+
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- teste mockup
-      
-      
-      
-      
 
-      -->
-
-    <div class="content">
-      <a class="alink" href="https://replit.com/@sarahmika/Qual-e-o-numero-primo" target="_blank"
-        rel="noopener noreferrer">
-        <div class="serviceBx">
-          <img src="images/lock.png" alt="" class="icons" />
-          <h3>Número Primo</h3>
-        </div>
-      </a>
-
-
-
-      <a class="alink" href="https://replit.com/@sarahmika/Jogo-da-Forca" target="_blank" rel="noopener noreferrer">
-        <div class="serviceBx">
-          <img src="images/sad.png" alt="" class="icons" />
-          <h3>Hangman</h3>
-        </div>
-      </a>
-
-
-      <a class="alink" href="https://replit.com/@sarahmika/Password-Generator" target="_blank"
-        rel="noopener noreferrer">
-        <div class="serviceBx">
-          <img src="images/cube.png" alt="" class="icons" />
-          <h3>Gerador&nbsp;de&nbsp;Senhas</h3>
-        </div>
-      </a>
-
-    </div>
   </section>
 
   <!-- ____ ____   ____ _______ ______ _____  
@@ -174,22 +172,16 @@
       <!--  -->
       <li><img class="gif" src="images/eyedribblecropped.gif" alt="" /></li>
       <!--  -->
+
+
       <li>
-        <a href="tel:+5541000000000" target="_blank" rel="noopener noreferrer"><img class="telephone"
-            src="images/telephoneFortePreto.png" alt="" /></a>
-      </li>
-      <li>
-        <a href="mailto:#" class="logo_email" target="_blank"
-          rel="noopener noreferrer"><img class="email" src="images/emailTag.png" alt="" /></a>
-      </li>
-      <li>
-        <a href="https://wa.me/554100000000" target="_blank" rel="noopener noreferrer"><img class="whatsapp"
-            src="images/whatsappbranco.png" alt="" /></a>
-      </li>
-      <li>
-        <a class="github" href="#" target="_blank" rel="noopener noreferrer"><img
+        <a class="github" href="https://github.com/Tizuka" target="_blank" rel="noopener noreferrer"><img
             src="images/github.png" alt="" /></a>
       </li>
+      <!-- <li>
+        <a class="likedin" href="https://www.linkedin.com/in/sarahnamikata/" target="_blank"
+          rel="noopener noreferrer"><img src="images/images-modified.png" alt="" /></a>
+      </li> -->
     </ul>
   </section>
 
