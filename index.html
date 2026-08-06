@@ -59,77 +59,152 @@
                                                                                                                            
 -->
 
-  <section id="Projetinhos">
-    <div class="secText">
-      <h2>My&nbsp;Projects</h2>
+  <section id="Projetinhos" class="projects-section">
+
+    <div class="projects-heading">
+      <h2>My Projects</h2>
+
+      <p>
+        Some of the projects I've developed.
+      </p>
     </div>
-    <!-- teste mockup -->
-    <div class="contentmokcup">
-      <div class="mockup-image">
-        <!-- COLOQYEI A IMAGEM DENTRO DE UM DIV COM WIDTH100% E COLOQYEI TEXT ALIGN START -->
-        <div class="moodtracker">
 
-          <div class="mockup-content">
-            <h2 class='subti'>MoodTracker | 2026 </h2>
-            <!-- 
-             -->
-            <div class="mockup-inner-content">
-              <img src="images/docker.png" alt="" />
-              <div class="mockcup-inner-p">
-                <h3>Docker</h3>
-                <p>
-                  Utilizei Docker e Docker Compose para empacotar a aplicação e executar o servidor e o MongoDB em
-                  containers separados, com rede interna, variáveis de ambiente e persistência de dados.
-                </p>
-              </div>
-            </div>
-            <!--  
-            -->
-            <div class="mockup-inner-content">
-              <img src="images/cicd.png" alt="" />
-              <div class="mockcup-inner-p">
-                <h3>CI/CD</h3>
-                <p>
-                  I created a GitHub Actions pipeline to automate dependency installation, code checks,
-                  container builds, and application availability testing.
-                </p>
-              </div>
-            </div>
-            <!-- ?? -->
-            <div class="mockup-inner-content">
-              <img src="images/k82.png" alt="" />
-              <div class="mockcup-inner-p">
-                <h3>Kubernetes</h3>
-                <p>
-                  I developed Kubernetes manifests to manage the application, configure replicas, service communication,
-                  environment variables, and sensitive information.
-                </p>
-              </div>
-            </div>
-            <div class="mockup-inner-content">
-              <img src="images/prometheus.png" alt="" />
-              <div class="mockcup-inner-p">
-                <h3>Prometheus/Grafana</h3>
-                <p>
-                  I implemented metrics with Prometheus and prom-client, exposed through the /metrics endpoint, and used
-                  Grafana to monitor the application's health and performance.
-                </p>
-              </div>
-            </div>
-            <!-- ccriei div pra colocar o botao -->
-            <div class="mockup-button-test">
-              <!-- contato botao -->
-              <a class="btn-mockup" href="https://github.com/Tizuka/moodtracker" target="_blank"
-                rel="noopener noreferrer">Veja</a>
+    <div class="projects-grid">
 
-              <!-- ??? -->
-            </div>
+      <!-- CARD DO MOODTRACKER -->
+      <article class="project-card-rounded">
+
+        <div class="project-card-header">
+          <span class="project-year">2026</span>
+          <h3>MoodTracker</h3>
+
+          <div class="project-title-decoration">
+            <span></span>
+            <i class="fa-solid fa-heart"></i>
+            <span></span>
           </div>
         </div>
 
-      </div>
-    </div>
+        <div class="project-features">
 
+          <div class="project-feature">
+            <div class="project-feature-icon docker-icon">
+              <img src="images/docker.png" alt="Docker">
+            </div>
+
+            <div class="project-feature-content">
+              <h4>Docker</h4>
+
+              <p>
+                I used Docker and Docker Compose to package the application
+                and run the Node.js server and MongoDB in separate containers,
+                using an internal network, environment variables and persistent
+                data storage.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-feature">
+            <div class="project-feature-icon cicd-icon">
+              <img src="images/cicd.png" alt="CI/CD">
+            </div>
+
+            <div class="project-feature-content">
+              <h4>CI/CD</h4>
+
+              <p>
+                I created a GitHub Actions pipeline to automate dependency
+                installation, code checks, container builds and application
+                availability testing.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-feature">
+            <div class="project-feature-icon kubernetes-icon">
+              <img src="images/k82.png" alt="Kubernetes">
+            </div>
+
+            <div class="project-feature-content">
+              <h4>Kubernetes</h4>
+
+              <p>
+                I developed Kubernetes manifests to manage the application,
+                configure replicas, service communication, environment variables
+                and sensitive information.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-feature">
+            <div class="project-feature-icon prometheus-icon">
+              <img src="images/prometheus.png" alt="Prometheus and Grafana">
+            </div>
+
+            <div class="project-feature-content">
+              <h4>Prometheus / Grafana</h4>
+
+              <p>
+                I exposed application metrics through the
+                <code>/metrics</code> endpoint and used Prometheus and Grafana
+                to monitor application health and performance.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="project-stack">
+          <p>Technologies used</p>
+
+          <div class="project-stack-icons">
+
+            <span title="Node.js">
+              <i class="fa-brands fa-node-js"></i>
+            </span>
+
+            <span title="JavaScript">
+              <i class="fa-brands fa-js"></i>
+            </span>
+
+            <span title="MongoDB">
+              <i class="fa-solid fa-leaf"></i>
+            </span>
+
+            <span title="Docker">
+              <i class="fa-brands fa-docker"></i>
+            </span>
+
+            <span title="GitHub Actions">
+              <i class="fa-brands fa-github"></i>
+            </span>
+
+            <span title="Kubernetes">
+              <i class="fa-solid fa-dharmachakra"></i>
+            </span>
+
+            <span title="Prometheus">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+            </span>
+
+            <span title="Grafana">
+              <i class="fa-solid fa-chart-line"></i>
+            </span>
+
+          </div>
+        </div>
+
+        <div class="project-card-action">
+          <a href="https://github.com/Tizuka/moodtracker" target="_blank" rel="noopener noreferrer"
+            class="project-card-button">
+            View project
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+      </article>
+
+    </div>
 
   </section>
 

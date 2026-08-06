@@ -673,6 +673,441 @@ section {
 
 
 /* =====================================================
+   NOVA SEÇÃO DE PROJETOS
+===================================================== */
+
+.projects-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 24px 120px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(126, 0, 50, 0.1),
+      transparent 60%
+    ),
+    #e74646;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-heading {
+  width: 100%;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.projects-heading h2 {
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.projects-heading p {
+  color: #6e0033;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 600;
+}
+
+.projects-grid {
+  width: 100%;
+  max-width: 1150px;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 470px), 1fr)
+  );
+  gap: 40px;
+  justify-items: center;
+}
+
+/* CARD */
+
+.project-card-rounded {
+  width: 100%;
+  max-width: 620px;
+  padding: 52px 58px 42px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(110, 0, 51, 0.08)
+    ),
+    #e74646;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 90px;
+
+  box-shadow:
+    0 25px 55px rgba(90, 0, 30, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card-rounded:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 35px 65px rgba(90, 0, 30, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* TÍTULO DO CARD */
+
+.project-card-header {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.project-year {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.project-card-header h3 {
+  color: #6e0033;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.project-title-decoration {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.project-title-decoration span {
+  width: 80px;
+  height: 1px;
+  background-color: rgba(110, 0, 51, 0.35);
+}
+
+.project-title-decoration i {
+  color: #6e0033;
+  font-size: 1.45rem;
+}
+
+/* LINHAS INTERNAS */
+
+.project-features {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-feature {
+  padding: 25px 0;
+
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 25px;
+  align-items: flex-start;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-feature:last-child {
+  border-bottom: none;
+}
+
+.project-feature-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.project-feature-icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: none;
+}
+
+.docker-icon {
+  background-color: #ffae34;
+}
+
+.cicd-icon {
+  background-color: #17dedb;
+}
+
+.kubernetes-icon {
+  background-color: #d7b711;
+}
+
+.prometheus-icon {
+  background-color: #19bad5;
+}
+
+.project-feature-content h4 {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.project-feature-content p {
+  max-width: 620px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.project-feature-content code {
+  padding: 2px 6px;
+
+  background-color: rgba(110, 0, 51, 0.18);
+  border-radius: 5px;
+
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.87em;
+}
+
+/* TECNOLOGIAS */
+
+.project-stack {
+  margin-top: 28px;
+}
+
+.project-stack > p {
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.project-stack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-stack-icons span {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+  border-radius: 15px;
+
+  box-shadow: 0 8px 18px rgba(90, 0, 30, 0.14);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-stack-icons span:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 13px 25px rgba(90, 0, 30, 0.22);
+}
+
+.project-stack-icons i {
+  color: #e74646;
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+/* BOTÃO */
+
+.project-card-action {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.project-card-button {
+  padding: 15px 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background-color: #ffffff;
+  border-radius: 999px;
+
+  color: #e74646;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(90, 0, 30, 0.2);
+}
+
+.project-card-button i {
+  opacity: 1;
+}
+
+/* =====================================================
+   RESPONSIVIDADE DO NOVO CARD
+===================================================== */
+
+@media (max-width: 800px) {
+  .projects-section {
+    padding: 85px 30px 95px;
+  }
+
+  .project-card-rounded {
+    max-width: 680px;
+    padding: 45px 40px 38px;
+    border-radius: 65px;
+  }
+
+  .project-feature {
+    grid-template-columns: 58px 1fr;
+    gap: 20px;
+  }
+
+  .project-feature-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .project-feature-icon img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 550px) {
+  .projects-section {
+    padding: 70px 15px 80px;
+  }
+
+  .projects-heading {
+    margin-bottom: 32px;
+  }
+
+  .projects-heading h2 {
+    font-size: 2.25rem;
+  }
+
+  .projects-heading p {
+    padding: 0 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .project-card-rounded {
+    padding: 36px 22px 30px;
+    border-radius: 45px;
+  }
+
+  .project-card-header {
+    margin-bottom: 22px;
+  }
+
+  .project-card-header h3 {
+    font-size: 1.9rem;
+  }
+
+  .project-title-decoration span {
+    width: 45px;
+  }
+
+  .project-feature {
+    padding: 22px 0;
+    grid-template-columns: 46px 1fr;
+    gap: 13px;
+  }
+
+  .project-feature-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .project-feature-icon img {
+    width: 29px;
+    height: 29px;
+  }
+
+  .project-feature-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .project-feature-content p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .project-stack-icons {
+    gap: 9px;
+  }
+
+  .project-stack-icons span {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .project-stack-icons i {
+    font-size: 1.25rem;
+  }
+
+  .project-card-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-card-rounded {
+    padding-inline: 17px;
+    border-radius: 35px;
+  }
+
+  .project-feature {
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+  }
+
+  .project-feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-feature-icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+
+/* =====================================================
    RESPONSIVIDADE — NOTEBOOK E TABLET
 ===================================================== */
 
@@ -916,6 +1351,12 @@ section {
   #contato {
     padding: 50px 40px;
   }
+
+
+
+
+
+  
 }
 
 /* =====================================================
