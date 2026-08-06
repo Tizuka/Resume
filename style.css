@@ -414,9 +414,17 @@ i {
   width: 80px;
   /* height: 55px; */
 }
+
+#contato .linkedin img {
+  width: 65px;
+  margin-top: 13px;
+  /* height: 55px; */
+}
 .github {
   filter: invert(1);
 }
+
+
 #contato li {
 padding-right: 40px;
   margin: auto 0;
