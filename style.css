@@ -606,9 +606,8 @@ body > header ul li:hover a {
 
     .project-card-rounded{
 
-        width:calc(100vw - 16px);
-
-        max-width:none;
+width: 100%;
+max-width: 100%;
 
         margin:auto;
 
