@@ -535,6 +535,7 @@ padding-right: 40px;
 .logo-empresa{
     width:140px;
     height:30px;
+    
 }
 
 .experiencia-atividades,
@@ -545,7 +546,7 @@ padding-right: 40px;
 /* Lado esquerdo */
 
 .experiencia-periodo {
-  margin: px 20px;
+  padding: 15px 0px;
 
   display: flex;
   align-items: center;
