@@ -34,7 +34,7 @@
     <a class="Logo" href=""> resume </a>
     <div class="menuToggle"></div>
     <ul class="nav">
-      <li class="active"><a href="#sobre">Sobre</a></li>
+      <li class="active"><a href="#sobre">About</a></li>
       <li><a href="#Projetinhos">Projects</a></li>
       <li><a href="#experiencia">Experience</a></li>
       <li><a href="#contato">Contact</a></li>
@@ -42,17 +42,42 @@
     </ul>
   </header>
 
-  <section id="sobre">
-    <div class="content">
-      <h2>Sarah Namikata
-      </h2>
-      <p>
-        Some of the projects I've developed throughout my journey in technology. Recently, I've been focusing my studies
-        on DevOps, exploring concepts such as containers, CI/CD pipelines, container orchestration, and observability.
+  <section id="sobre" class="hero">
+
+    <div class="hero-content">
+
+      <p class="hero-label">
+        Software Development <span>·</span> DevOps
       </p>
-      <a href="#contato" class="btn">Contato</a>
+
+      <h1>Sarah Namikata</h1>
+
+      <p class="hero-description">
+        Software developer focused on DevOps, with hands-on experience
+        building projects using Docker, CI/CD, Kubernetes and
+        observability tools.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="#Projetinhos" class="hero-button hero-button-primary">
+          View projects
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="#contato" class="hero-button hero-button-secondary">
+          Get in touch
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+      </div>
+
     </div>
-    <img class="MulherFrontImagem" src="images/euimage-modified.png" alt="" />
+
+    <div class="hero-image-container">
+      <img class="MulherFrontImagem" src="images/euimage-modified.png" alt="Sarah Namikata" />
+    </div>
+
   </section>
 
   <!-- 
@@ -75,8 +100,7 @@
       <article class="project-card-rounded">
 
         <div class="project-card-header">
-          <span class="project-year">2026</span>
-          <h3>MoodTracker</h3>
+          <h3>MoodTracker | 2026</h3>
 
           <div class="project-title-decoration">
             <span></span>
@@ -235,7 +259,7 @@
           <span>2024 — 2026</span>
         </div>
 
-        <h3>Trainee in Information Technology</h3>
+        <h3>Trainee as Software Developer</h3>
 
         <p class="experiencia-empresa">
           Company in the oil and gas sector
@@ -312,26 +336,42 @@
 
 
   <section id="contato">
-    <div class="secText">
-      <h2>Get&nbsp;In&nbsp;Touch.</h2>
+    <div class="contact-content">
+
+      <div class="contact-heading">
+        <h2>Get In Touch.</h2>
+
+        <p>
+          Find me online or take a look at my work.
+        </p>
+      </div>
+
+      <ul class="social_icon">
+
+        <!-- Mantém seu GIF -->
+        <li>
+          <div class="contact-social-button contact-eye">
+            <img class="gif" src="images/eyedribblecropped.gif" alt="Animated eye" />
+          </div>
+        </li>
+
+        <li>
+          <a class="contact-social-button" href="https://github.com/Tizuka" target="_blank" rel="noopener noreferrer"
+            aria-label="Visit my GitHub profile">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+
+        <li>
+          <a class="contact-social-button" href="https://www.linkedin.com/in/sarahnamikata/" target="_blank"
+            rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </li>
+
+      </ul>
+
     </div>
-
-    <ul class="social_icon">
-      <!--  -->
-      <li><img class="gif" src="images/eyedribblecropped.gif" alt="" /></li>
-      <!--  -->
-
-
-      <li>
-        <a class="github" href="https://github.com/Tizuka" target="_blank" rel="noopener noreferrer"><img
-            src="images/github.png" alt="" /></a>
-      </li>
-      <li>
-        <a class="linkedin" href="https://www.linkedin.com/in/sarahnamikata/" target="_blank"
-          rel="noopener noreferrer"><img src="images/images-modified.png" alt="" /></a>
-      </li>
-
-    </ul>
   </section>
 
   <script src="index.js"></script>
