@@ -374,8 +374,7 @@ a{
   filter: invert(1);
   opacity: 0.5;
 }
-#Projetinhos .content .serviceBx h3,
-i {
+#Projetinhos .content .serviceBx h3 {
   /* filter: invert(1); */
   opacity: 0.5;
 }
@@ -656,399 +655,483 @@ padding-right: 40px;
   text-align: center;
 }
 
+/* RESPONSIVE BASE SAFETY */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+section {
+  scroll-margin-top: 82px;
+}
+
+
 /* =====================================================
-   EXPERIÊNCIA — TABLET
+   RESPONSIVIDADE — NOTEBOOK E TABLET
 ===================================================== */
 
-@media (max-width: 1100px) {
-  #experiencia {
-    padding: 110px 50px;
-  }
-
-  .experiencia-card {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .experiencia-tecnologias {
-    grid-column: 1 / -1;
-    margin-top: 30px;
-    padding-top: 35px;
-    border-top: 1px solid #e8e8e8;
-    border-left: none;
-  }
-
-  .tecnologias-lista {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-
-
 @media (max-width: 1266px) {
-
-.content h2 {
-  font-size: 4.4rem;
-}
-
-  #sobre .MulherFrontImagem {
-    max-width: 380px;
-
-    position: absolute;
-    width: 64vh;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* adicionei */
-  }
-
-  .mockup-image {
-    display: flex;
-    justify-content: center;
-  }
-  .mockup-content h2 {
-    padding: 40px;
-    text-align: center;
-    font-size: 30px;
-  }
-  /*#mudanca .content .btn{
-margin-left: 5px;
-} */
-  .content .btn{
-    margin-left: 7.5px;
-    }
-
-  .mockcup-inner-p p {
-    width: 400px;
-    padding: 10px;
-  }
-  .btn-mockup {
-    margin-left: 30px;
-    max-width: 150px;
-    /* padding: 12px 25px; */
-    letter-spacing: 0.02em;
-  }
-
   header {
     padding: 20px 50px;
-    /* sem esse padding os elementos da navbar ficam apertados */
   }
+
   header ul {
     display: none;
   }
+
   .menuToggle {
     position: relative;
     width: 30px;
-    height: 20px;
+    height: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 10001;
   }
-  .menuToggle::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background: #d83636;
-    transform: translateY(-10px);
-    transition: 0.5s;
-    box-shadow: 0 10px #d83636;
-  }
+
+  .menuToggle::before,
   .menuToggle::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 4px;
     background: #d83636;
-    transform: translateY(10px);
-    transition: 0.5s;
+    transition: 0.4s;
+  }
+
+  .menuToggle::before {
+    transform: translateY(-9px);
+    box-shadow: 0 9px #d83636;
+  }
+
+  .menuToggle::after {
+    transform: translateY(9px);
   }
 
   header.active .menuToggle::before {
-    transform: translateY(0px) rotate(45deg);
-    box-shadow: 0 0 #d83636;
+    transform: translateY(0) rotate(45deg);
+    box-shadow: none;
   }
+
   header.active .menuToggle::after {
-    transform: translateY(0px) rotate(315deg);
-    box-shadow: 0 0 #d83636;
+    transform: translateY(0) rotate(-45deg);
   }
+
   header.active ul {
     position: fixed;
-    left: 0;
-    top: 70px;
+    inset: 70px 0 0;
     width: 100%;
-    height: calc(100vh - 87px);
+    min-height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.87);
     flex-direction: column;
+    gap: 24px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
     z-index: 10000;
-    gap: 19px;
   }
 
   header.active ul a {
-    font-size: 1.9em;
+    font-size: 1.8rem;
   }
 
   #sobre {
-    padding: 100px 100px;
+    min-height: 980px;
+    padding: 130px 70px 50px;
     flex-direction: column;
-    padding-bottom: 0;
-    min-height: 1000px;
+    justify-content: flex-start;
+    text-align: center;
   }
+
+  #sobre .content {
+    width: 100%;
+    max-width: 760px;
+    align-items: center;
+    margin: 0;
+  }
+
   #sobre .content h2 {
-    font-size: 4em;
-  }
-  .btn {
-    max-width: 160px;
-    padding: 10px 20px;
-  }
-
-  .secText h2 {
-    white-space: nowrap;
-    font-size: 2em;
-    text-align: center;
-  }
-
-  #sobre,
-  #Projeinhos,
-  #contato {
-    padding: 60px;
-  }
-  #Projetinhos .content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 1000px) {
-  #sobre .MulherFrontImagem {
-    max-width: 380px;
+    padding-left: 0;
+    font-size: clamp(4rem, 8vw, 5.2rem);
   }
 
   #sobre .content p {
-    font-size: large;
+    width: 100%;
   }
-
-  .mockup-content h2 {
-    padding: 40px;
-    text-align: center;
-    font-size: 30px;
-  }
-
-  .mockcup-inner-p p {
-    font-size: 18px;
-    width: 280px;
-    padding: 10px;
-  }
-}
-@media (max-width: 750px) {
-#Projetinhos .content .serviceBx img {
-    width: 88px;
-  }
-
 
   #sobre .MulherFrontImagem {
-    max-width: 380px;
-  }
-  /*#mudanca .content .btn{
-margin-left: 5px;
-}  */
-.content .btn{
-margin-left: 5.5px;
-}
-  #sobre .content p {
-    font-size: large;
+    top: 68%;
+    left: 50%;
+    width: min(410px, 58vh);
+    max-width: 80vw;
   }
 
   #Projetinhos {
-    padding: 3px 1px;
-    /* ao inves de padding 100px e 100px se nao fica torto */
-  }
-  .secText h2 {
-    padding-top: 50px;
+    padding: 90px 60px;
   }
 
-
-  .serviceBx {
-    margin: 3px 30px;
-  }
-
-  .imagem-celular {
-    width: 300px;
-  }
   .mockup-image {
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:20px;
+    width: 100%;
   }
 
-  .mockcup-inner-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+  .mockup-content,
+  .moodtracker,
+  .contentmokcup {
+    width: 100%;
   }
+
+  .mockup-inner-content {
+    width: min(100%, 720px);
+    margin-inline: auto;
+  }
+
+  .mockcup-inner-p {
+    flex: 1;
+    min-width: 0;
+  }
+
   .mockcup-inner-p p {
-    font-size: 17px;
-    width: 360px;
-    padding: 10px;
-  }
-  .mockup-content h2 {
-    padding: 40px 0;
-    text-align: center;
-    margin-left: 0px;
-    font-size: 27px;
-  }
-  .btn-mockup {
-    margin: auto;
-    max-width: 110px;
-    letter-spacing: 0.05em;
+    width: 100%;
+    max-width: 620px;
   }
 
-  
-}
-@media (max-width: 701px) {
-  #sobre .MulherFrontImagem {
-    max-width: 380px;
+  #experiencia {
+    min-height: auto;
+    padding: 100px 50px;
   }
+
+  .experiencia-card {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+  }
+
+  .experiencia-tecnologias {
+    grid-column: 1 / -1;
+    margin-top: 28px;
+    padding-top: 34px;
+    border-top: 1px solid #e8e8e8;
+    border-left: none;
+  }
+
+  .tecnologias-lista {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =====================================================
+   RESPONSIVIDADE — TABLET PEQUENO
+===================================================== */
+
+@media (max-width: 900px) {
+  header {
+    padding: 18px 30px;
+  }
+
+  #sobre {
+    min-height: auto;
+    padding: 120px 40px 55px;
+    gap: 35px;
+  }
+
+  #sobre .content h2 {
+    white-space: normal;
+    font-size: clamp(3rem, 10vw, 4.4rem);
+    line-height: 1.08;
+  }
+
   #sobre .content p {
-    font-size: large;
-  
+    padding: 8px 0;
+    font-size: 1.05rem;
   }
 
-  .mockup-content h2 {
-    padding: 40px;
+  #sobre .MulherFrontImagem {
+    position: static;
+    width: min(380px, 82vw);
+    height: auto;
+    transform: none;
   }
 
-/* 19.11.2023 10:05 #mudanca */
-
-  #sobre .content h2 {
-    font-size: 3.3em;
+  #Projetinhos {
+    padding: 80px 40px;
   }
-  #Projetinhos .content {
-    grid-template-columns: repeat(1, 1fr);
+
+  .secText h2 {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .mockup-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mockup-content {
+    align-items: center;
+  }
+
+  .mockup-inner-content {
+    max-width: 680px;
+  }
+
+  #experiencia {
+    padding: 85px 40px;
+  }
+
+  .experiencia-card {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    padding: 32px;
+  }
+
+  .experiencia-resumo,
+  .experiencia-atividades,
+  .experiencia-tecnologias {
+    padding: 28px 12px;
+  }
+
+  .experiencia-atividades,
+  .experiencia-tecnologias {
+    margin-top: 4px;
+    border-top: 1px solid #e8e8e8;
+    border-left: none;
+  }
+
+  .experiencia-tecnologias {
+    grid-column: auto;
+  }
+
+  .tecnologias-lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #contato {
+    padding: 50px 40px;
   }
 }
 
-@media (max-width: 602px) {
+/* =====================================================
+   RESPONSIVIDADE — CELULAR
+===================================================== */
 
+@media (max-width: 600px) {
+  header {
+    padding: 16px 20px;
+  }
 
-/* 19.11.2023 10:05 #mudanca */
+  header .Logo {
+    font-size: 1.6rem;
+  }
+
+  header.active ul {
+    inset: 64px 0 0;
+    min-height: calc(100vh - 64px);
+  }
+
+  #sobre {
+    padding: 105px 20px 45px;
+    gap: 24px;
+  }
+
+  #sobre .content {
+    width: 100%;
+  }
+
   #sobre .content h2 {
-    font-size: 2.8rem;
-    
-  } 
-  
+    padding: 0;
+    font-size: clamp(2.3rem, 12vw, 3.25rem);
+  }
+
+  #sobre .content p {
+    padding: 8px 0;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
   .btn {
-    margin-left: 6px;
+    max-width: none;
+    margin: 5px 0 0;
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  #sobre .MulherFrontImagem {
+    width: min(290px, 80vw);
+  }
+
+  #Projetinhos {
+    padding: 65px 20px;
+  }
+
+  .secText h2 {
+    padding-top: 0;
+    font-size: 2rem;
+  }
+
+  .mockup-content h2 {
+    padding: 28px 0;
+    font-size: 1.6rem;
+  }
+
+  .mockup-inner-content {
+    width: 100%;
+    padding: 13px 0;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .mockup-inner-content img {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  .mockcup-inner-p h3 {
+    padding-left: 5px;
+    font-size: 1rem;
+  }
+
+  .mockcup-inner-p p {
+    width: 100%;
+    padding: 7px 5px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .btn-mockup {
+    max-width: none;
+    margin: 18px auto 0;
+    padding: 11px 23px;
+    font-size: 1rem;
+  }
+
+  #experiencia {
+    padding: 72px 18px;
+  }
+
+  .experiencia-titulo {
+    margin-bottom: 28px;
+  }
+
+  .experiencia-titulo > i {
+    font-size: 1.9rem;
+  }
+
+  .experiencia-titulo h2 {
+    font-size: 2rem;
+  }
+
+  .experiencia-titulo p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .experiencia-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .experiencia-resumo,
+  .experiencia-atividades,
+  .experiencia-tecnologias {
+    padding: 24px 3px;
+  }
+
+  .logo-empresa {
+    width: 125px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .experiencia-periodo {
+    padding: 15px 0;
+    font-size: 0.95rem;
+  }
+
+  .experiencia-periodo i {
+    width: 40px;
+    height: 40px;
+  }
+
+  .experiencia-resumo h3 {
+    font-size: 1.35rem;
+  }
+
+  .experiencia-descricao,
+  .experiencia-atividades li {
+    font-size: 0.93rem;
+  }
+
+  .tecnologias-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologias-lista span {
+    width: 100%;
+    min-height: 45px;
+    white-space: normal;
+  }
+
+  .custom-shape-divider-top-1786017903 svg,
+  .custom-shape-divider-top-1786017904 svg {
+    height: 55px;
+  }
+
+  #contato {
+    padding: 45px 20px;
+  }
+
+  #contato .social_icon {
+    padding: 0;
+    gap: 20px;
+  }
+
+  #contato li {
+    margin: 0;
+    padding-right: 0;
+  }
+
+  #contato img {
+    width: 45px;
+  }
+
+  #contato .linkedin img {
+    width: 42px;
+    margin-top: 7px;
   }
 
   #contato .social_icon .gif {
-    width: 50px;
-
-  }
-  #contato img {
-    width: 35px;
-
-  .imagem-celular{
-      width: 283px;
-    }
-
-  #Projetinhos .content .serviceBx img {
-      max-width: 65px;
-    }
-/* 
-
-*/
-  #sobre .MulherFrontImagem {
-    position: absolute;
-    max-width: 380px;
-    top: 73%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .mockcup-inner-p p {
-    font-size: 15px;
-    width: 290px;
-    padding: 10px;
-  }
-
-
-  #Projetinhos .content .serviceBx h3 {
-    font-size: 1rem;
-  }
-  .content {
-    grid-gap: 10px;
-    margin: 30px 0;
-  }
-
-  .mockup-content h2 {
-    padding: 40px;
-  }
-}
-@media (max-width: 422px) {
-
-  #Projetinhos .content .serviceBx img {
-    max-width: 55px;
-  }
-
-  #sobre .MulherFrontImagem {
-    top: 75%;
-  }
-
-}
-@media (max-width: 402px) {
-/*#mudanca coloque 2,8 n tinha antes */
-#Projetinhos .content .serviceBx img {
-  max-width: 50px;
-}
-
-  #sobre {
-    min-height: 870px;
-  }
-  .mockup-content h2 {
-    padding: 40px;
-  }
-
-  #Projetinhos {
-    padding: 1px 1px;
-  }
-
-  #sobre .MulherFrontImagem {
-    max-width: 380px;
-    width: 44vh;
+    width: 58px;
   }
 }
 
-/* desgraca de MOBILE DO FIREFOX */
-@media (max-width: 396px) {
-  #sobre .MulherFrontImagem {
-    top: 75%;
-  }
-}
+/* =====================================================
+   RESPONSIVIDADE — CELULARES MUITO PEQUENOS
+===================================================== */
+
 @media (max-width: 380px) {
-  .mockup-content h2 {
-    padding: 40px;
+  #sobre,
+  #Projetinhos {
+    padding-inline: 15px;
   }
 
-  #sobre .MulherFrontImagem {
-    top: 75%;
-    width: 34vh;
+  #experiencia {
+    padding-inline: 12px;
+  }
+
+  .experiencia-card {
+    padding: 16px;
   }
 
   .mockcup-inner-p p {
-    width: 260px;
-    /* adicionado */
+    font-size: 0.87rem;
   }
-}
-@media (max-width: 300px) {
-  #sobre .MulherFrontImagem {
-    top: 25%;
-  }
-}
-
-
-
 }
