@@ -305,10 +305,10 @@ body > header ul li:hover a {
 }
 
 .projects-grid {
-    width: 50%;
+    width: 100%;
     max-width: 1600px;
     display: grid;
-    gap: 25px;
+    gap: 15px;
 }
 
 .project-card-rounded {
