@@ -305,8 +305,8 @@ body > header ul li:hover a {
 }
 
 .projects-grid {
-  width: 90%;
-  max-width: 1000px;
+    width: 90%;
+    max-width: 1600px;
   display: grid;
   gap: 25px;
 }
@@ -315,7 +315,7 @@ body > header ul li:hover a {
   width: 100%;
   max-width: 1050px;
   margin-inline: auto;
-  padding: 38px 35px 28px;
+ padding: 25px 20px;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(110, 0, 51, 0.07)),
     var(--red);
