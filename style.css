@@ -311,6 +311,7 @@ body > header ul li:hover a {
   width: 100%;
   max-width: 1600px;
   display: grid;
+  margin-top: 15px;
   gap: 14px;
 }
 
@@ -347,7 +348,7 @@ body > header ul li:hover a {
 }
 
 .project-card-header h3 {
-  padding-top: 13px;
+  padding-top: 20px;
   color: var(--wine);
   font-size: 1.55rem;
   line-height: 1.15;
