@@ -27,6 +27,10 @@ body {
   background: var(--white);
 }
 
+svg {
+  display: block;
+}
+
 a {
   text-decoration: none;
 }
@@ -275,6 +279,10 @@ body > header ul li:hover a {
 /* =====================================================
    PROJECTS
 ===================================================== */
+.projects-wave{
+  width: 100%;
+  height: 10%;
+}
 
 .projects-section {
   width: 100%;
@@ -283,9 +291,7 @@ body > header ul li:hover a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background:
-    radial-gradient(circle at center, rgba(126, 0, 50, 0.1), transparent 65%),
-    var(--red);
+  background:var(--red);
 }
 
 .projects-heading {
@@ -956,9 +962,7 @@ max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background:
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.035), transparent 58%),
-    var(--contact);
+  background:var(--contact);
 }
 
 .contact-content {
